@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/mckros/tianbot_mini_ws/devel/include/**",
+        "/home/mckros/volcano_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/usr/include/**",
+        "/home/mckros/mecanum_ws/src/mecanum_robotsim/include/**",
+        "/home/mckros/volcano_ws/src/volcano/librviz-master/robomap/include/**",
+        "/home/mckros/tianbot_mini_ws/src/tianbot/rosserial/rosserial_server/include/**",
+        "/home/mckros/tianbot_mini_ws/src/tianbot/rosserial/rosserial_test/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

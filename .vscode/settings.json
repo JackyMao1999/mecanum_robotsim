@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/mckros/tianbot_mini_ws/devel/lib/python3/dist-packages",
+        "/home/mckros/volcano_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/usr/lib/python3/dist-packages"
+    ],
+    "files.associations": {
+        "typeindex": "cpp",
+        "typeinfo": "cpp"
+    },
+    "python.analysis.extraPaths": [
+        "/home/mckros/tianbot_mini_ws/devel/lib/python3/dist-packages",
+        "/home/mckros/volcano_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/usr/lib/python3/dist-packages"
+    ]
+}
