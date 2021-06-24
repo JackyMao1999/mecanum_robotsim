@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   sensor_msgs
   message_generation
+  tf
 )
 
 ## Generate messages in the 'msg' folder
@@ -199,3 +200,7 @@ include_directories(
 add_executable(mecanum_velocity_v1 src/mecanum_velocity_v1.cpp)
 add_dependencies(mecanum_velocity_v1 webots_ros_generate_messages_cpp)
 target_link_libraries(mecanum_velocity_v1	${catkin_LIBRARIES})
+
+add_executable(mecanum_cartographer_bringup src/mecanum_cartographer_bringup.cpp)
+add_dependencies(mecanum_cartographer_bringup webots_ros_generate_messages_cpp)
+target_link_libraries(mecanum_cartographer_bringup	${catkin_LIBRARIES})

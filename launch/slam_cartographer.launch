@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- Copyright:Volcano Mecanum Robot -->
+<!-- Author: 锡城筱凯 -->
+<!-- Date:2021-06-23  -->
+<!-- Blog：https://blog.csdn.net/xiaokai1999 -->
+<!-- Description: 启动webots的launch文件 -->
+<launch>
+  <!-- bringup -->
+  <node name="mecanum_velocity_v1" pkg="mecanum_robotsim" type="mecanum_velocity_v1" />
+  <node name="mecanum_cartographer_bringup" pkg="mecanum_robotsim" type="mecanum_cartographer_bringup" />
+
+  <!-- RVIZ -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mecanum_robotsim)/rviz/volcano_cartographer.rviz" /> 
+
+</launch>

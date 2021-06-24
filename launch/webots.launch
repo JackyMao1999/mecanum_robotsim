@@ -1,13 +1,19 @@
 <?xml version="1.0"?>
+<!-- Copyright:Volcano Mecanum Robot -->
+<!-- Author: 锡城筱凯 -->
+<!-- Date:2021-06-23  -->
+<!-- Blog：https://blog.csdn.net/xiaokai1999 -->
+<!-- Description: 启动webots的launch文件 -->
 <launch>
   <!-- 使用仿真时间 -->>
   <param name="/use_sim_time" value="true" />
   <!-- 启动Webots -->
+  <!-- 注意：2021a版本的webots写成no_gui;2020b版本写成no-gui -->
   <arg name="no_gui" default="false," doc="Start Webots with minimal GUI"/>
   <include file="$(find webots_ros)/launch/webots.launch">
     <arg name="mode" value="realtime"/>
     <arg name="no_gui" value="$(arg no_gui)"/>
+    <!-- 启动Mecanum_world.wbt环境 -->
     <arg name="world" value="$(find mecanum_robotsim)/world/Mecanum_world.wbt"/>
   </include>
-
 </launch>

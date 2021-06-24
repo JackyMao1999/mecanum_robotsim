@@ -1,3 +1,10 @@
+/************************************************* 
+Copyright:Volcano Mecanum Robot 
+Author: 锡城筱凯
+Date:2021-06-23 
+Blog：https://blog.csdn.net/xiaokai1999
+Description:麦轮小车的速度控制文件
+**************************************************/
 #include <signal.h>
 #include <std_msgs/String.h>
 #include "ros/ros.h"
@@ -59,7 +66,12 @@ void controllerNameCallback(const std_msgs::String::ConstPtr &name) {
     ROS_INFO("Controller #%d: %s.", controllerCount, controllerList.back().c_str());
 
 }
-
+/*******************************************************
+* Function name ：init_controller
+* Description   ：初始化所有控制器
+* Parameter     ：无
+* Return        ：无
+**********************************************************/
 int init_controller(){
     string controllerName;
     // 订阅model_name话题获取控制器
@@ -86,7 +98,7 @@ int init_controller(){
         }
     } 
     ROS_INFO("Using controller: '%s'", controllerName.c_str());
-    // leave topic once it is not necessary anymore
+    // 关闭topic
     nameSub.shutdown();
 }
 
@@ -149,34 +161,34 @@ void keyboardDataCallback(const webots_ros::Int32Stamped::ConstPtr &value){
     {
         // <
         case 314:
-            speeds[0] = -5.0;
-            speeds[1] = 5.0;
-            speeds[2] = 5.0;
-            speeds[3] = -5.0;
+            speeds[0] = -3.0;
+            speeds[1] = 3.0;
+            speeds[2] = 3.0;
+            speeds[3] = -3.0;
             send=1;
             break;
         // ^
         case 315:
-            speeds[0] = 4.0;
-            speeds[1] = 4.0;
-            speeds[2] = 4.0;
-            speeds[3] = 4.0;
+            speeds[0] = 2.0;
+            speeds[1] = 2.0;
+            speeds[2] = 2.0;
+            speeds[3] = 2.0;
             send=1;
             break;
         // >
         case 316:
-            speeds[0] = 5.0;
-            speeds[1] = -5.0;
-            speeds[2] = -5.0;
-            speeds[3] = 5.0;
+            speeds[0] = 3.0;
+            speeds[1] = -3.0;
+            speeds[2] = -3.0;
+            speeds[3] = 3.0;
             send=1;
             break;
-        // 
+        // 👇
         case 317:
-            speeds[0] = -4.0;
-            speeds[1] = -4.0;
-            speeds[2] = -4.0;
-            speeds[3] = -4.0;
+            speeds[0] = -2.0;
+            speeds[1] = -2.0;
+            speeds[2] = -2.0;
+            speeds[3] = -2.0;
             send=1;
             break;
         // space
