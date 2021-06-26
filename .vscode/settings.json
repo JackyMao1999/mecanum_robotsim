@@ -7,7 +7,8 @@
     ],
     "files.associations": {
         "typeindex": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "iomanip": "cpp"
     },
     "python.analysis.extraPaths": [
         "/home/mckros/tianbot_mini_ws/devel/lib/python3/dist-packages",
